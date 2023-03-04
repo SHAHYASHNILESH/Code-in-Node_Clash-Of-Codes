@@ -10,6 +10,7 @@ require('./db/conn');
 
 app.use(express.json());
 app.use(require('./router/auth'));
+app.use(require('./router/group'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
