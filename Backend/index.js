@@ -1,21 +1,47 @@
 const dotenv = require('dotenv');
 const express = require('express');
-// app contains properties and methods of express
+const multer=require('multer');
+const path=require('path');
+const imageModel=require('./models/imageSchema');
 const app = express();
 
-//Link from after connecting mongodb cluster: mongodb+srv://<username>:<password>@cluster0.ufqzfkc.mongodb.net/<database name>?retryWrites=true&w=majority
 dotenv.config({path: './config.env'});
 require('./db/conn');
 
-// App does not understand json so this converts to a object
 app.use(express.json());
-
-// We link the route files to make our route easy
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT || 5000;
+const storage=multer.diskStorage({
+    destination:'uploads',
+    filename:(req,file,cb)=>{
+        cb(null,file.originalname);
+    },
+});
 
-// tells if server is listening/running on port
+const upload=multer({
+    storage:storage,
+}).single('testImage')
+
+app.post('/upload',(req,res)=>{
+   upload(req,res,(err)=>{
+     if(err){
+        console.log(err);
+     }
+     else{
+        const newImage=new imageModel({
+            name:req.body.name,
+            image:{
+                data:req.file.filename,
+                contentType:'image/jpg'
+            }
+        })
+        newImage.save().then(()=>res.send("Image Uploaded")).catch(err=>console.log(err));
+     }
+   })
+})
+
+
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server is running at port no. ${PORT}`);
 })
