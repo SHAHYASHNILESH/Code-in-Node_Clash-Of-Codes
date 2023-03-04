@@ -31,7 +31,17 @@ const userSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    
+    avatar:{
+         type:Buffer,
+    },
+    bio:{
+        type:String,
+        required:true,
+    },
+    interests:{
+        type:String,
+        required:true,
+    },
     tokens: [
         {
             token: {

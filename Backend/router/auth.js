@@ -1,5 +1,6 @@
 const express = require("express");
 const bcrypt = require('bcryptjs');
+const upload=require('../middleware/upload');
 
 // Router for backend
 const router = express.Router();
@@ -9,10 +10,10 @@ const User = require('../models/userSchema');
 
 
 // Using async-await
-router.post("/register", async (req, res) => {
+router.post("/register", upload.single('avatar'),async (req, res) => {
   // get the data sent by user
   const { name, email, phone, password, gender, location, dob } = req.body;
-
+  
   // Validation
   if (!name || !email || !phone || !password || !gender || !location || !dob) {
     // 422 - Unprocessable entity
@@ -27,7 +28,13 @@ router.post("/register", async (req, res) => {
     if (userExist) {
       return res.status(422).json({ error: "Email address already exists" });
     } else {
-      const user = new User({ name, email, phone, password, gender, location, dob });
+      const user = new User({ 
+        name, email, phone, password, gender, location, dob 
+      });
+      
+      if(req.file){
+        user.avatar=req.file.path;
+      }
 
       await user.save();
 
