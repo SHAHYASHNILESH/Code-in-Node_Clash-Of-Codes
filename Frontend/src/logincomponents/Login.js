@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Login1.scss'
 import { Navigate, useNavigate } from "react-router-dom";
-// import { Link ,useLocation} from 'react-router-dom';
+import { Link ,useLocation} from 'react-router-dom';
 
 
 export default function Login() {
@@ -104,8 +104,8 @@ export default function Login() {
         <span>Phone Number</span>
         <input type="tel" name="phone"  onChange={handleInput1}/>
       </label>
-    
-      {/* <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link> */}
+
+      
       <button className="submit" type="button" onClick={loginData}>
               Sign In
             </button>
@@ -166,9 +166,17 @@ export default function Login() {
           <input type="text" name="state" onChange={handleInput}/>
         </label>
       
-        <button type="button" className="submit" onClick={postData}>
+        {/* <button type="button" className="submit" onClick={postData}>
                 Sign Up Now
-              </button>
+              </button> */}
+              
+        {/* This is just for test. For backend use above code - 169 */}
+
+        <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link>
+        <Link to="/Buildprofile"><button className="submit" type="button">Sign In</button></Link>
+
+        
+        
 
       </div>
     </div>

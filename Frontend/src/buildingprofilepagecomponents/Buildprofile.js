@@ -1,14 +1,22 @@
 import React from 'react';
-import logo from '../Media/logo-img.png'
-import './Creategroup.scss';
-import footer2 from '../Media/Footer/post-02.jpg'
-import footer3 from '../Media/Footer/post-01.jpg'
+import logo from '../Media/logo-img.png';
+import './Buildprofile.scss';
+import footer2 from '../Media/Footer/post-02.jpg';
+import footer3 from '../Media/Footer/post-01.jpg';
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
-export const Creategroup = () => {
+export const Buildprofile = () => {
+    const [interests, setInterests] = useState([]);
+    const [newInterest, setNewInterest] = useState('');
+
+    const handleAddInterest = () => {
+        setInterests([...interests, newInterest]);
+        setNewInterest('');
+    };
     return (
         <>
-            <div id="creategroup">
+            <div id="buildprofile">
                 <nav className="navbar"  >
 
                     <div>
@@ -38,29 +46,36 @@ export const Creategroup = () => {
                 </nav>
                 <div className="main_div1">
                     <div className="text_div">
-                        <h1>Create Group</h1>
+                        <h1>Build Your Profile !</h1>
                         <div className="creategroupform">
                             <form action="">
                                 <div>
-                                    <label htmlFor="groupname">Group Name : </label>
-                                    <input type="text" name='grpname' id='grpname' style={{ marginLeft: '150px' }} />
-                                </div>
-                                <div>
-                                    <label htmlFor="location">Enter Location : </label>
-                                    <input type="text" name='loc' id='loc' style={{ marginLeft: '132px' }} />
-                                </div>
-                                <div>
-                                    <label htmlFor="startdate">Start Date : </label>
-                                    <input type="date" name='startdate' id='startdate' style={{ marginLeft: '175px' }} />
-                                </div>
-                                <div>
-                                    <label htmlFor="duration">Duration (in days) : </label>
-                                    <input type="text" name='duration' id='duration' style={{ marginLeft: '95px' }} />
+                                    <label htmlFor="profileimage">Upload Profile Image : </label>
+                                    <input type="file" name='profileimg' id='profileimg'
+                                        accept=".png, .jpg, .jpeg" style={{ marginLeft: '75px' }} />
                                 </div>
                                 <div>
                                     <label htmlFor="description">Enter Description : </label>
-                                    <textarea name="desc" id="desc" cols="30" rows="10" style={{ marginLeft: '105px' }}></textarea >
+                                    <textarea name="desc" id="desc" cols="30" rows="10" style={{ marginLeft: '107px' }}></textarea >
                                 </div>
+                                <div>
+                                <label htmlFor="interest">What are your interest ? : </label>
+                                    <input
+                                        type="text"
+                                        value={newInterest}
+                                        onChange={(event) => setNewInterest(event.target.value)}
+                                        style={{ marginLeft: '78px', marginRight:'3px' }}
+                                    />
+                                    <button onClick={handleAddInterest}>Add Interest</button>
+                                    <ul>
+                                        {interests.map((interest) => (
+                                            <li key={interest}>{interest}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+
+
                                 <div className="creategroupbtn">
                                     <button className="button-36" role="button">SUBMIT</button>
                                     <button className="button-36" role="reset">RESET</button>

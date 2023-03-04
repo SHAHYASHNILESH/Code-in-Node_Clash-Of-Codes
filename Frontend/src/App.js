@@ -12,6 +12,8 @@ import {
   Route,
 } from "react-router-dom";
 import { Creategroup } from './creategroupcomponent/Creategroup';
+import { Buildprofile } from './buildingprofilepagecomponents/Buildprofile.js';
+import Mainpage from './profilepagecomponent/Mainpage';
 
 
 
@@ -29,6 +31,11 @@ function App() {
       <Route path ="/Contactus" element = {<Contactus/>}/>
       <Route path = "/Login" element = {<Login/>}/>
       <Route path = "/Dummy" element ={<Dummy/>}/>
+
+      <Route path = "/Buildprofile" element ={<Buildprofile/>}/>
+      {/* This is profile page (below) */}
+      <Route path = "/Mainpage" element ={<Mainpage/>}/>
+
      </Routes>
     </>
   );
