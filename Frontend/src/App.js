@@ -11,6 +11,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { Creategroup } from './creategroupcomponent/Creategroup';
 
 
 
@@ -23,7 +24,7 @@ function App() {
       <Route path ="/" element = {<Home/>}/>
       <Route path ="/Aboutus" element = {<Aboutus/>}/>
       <Route path = "/Service" element = {<Service/>}/>
-      <Route path = "/Ourteam" element = {<Ourteam/>}/>
+      <Route path = "/Creategroup" element = {<Creategroup/>}/>
       <Route path = "/Blog" element = {<Blog/>}/>
       <Route path ="/Contactus" element = {<Contactus/>}/>
       <Route path = "/Login" element = {<Login/>}/>
