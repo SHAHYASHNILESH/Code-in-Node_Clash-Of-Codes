@@ -238,6 +238,7 @@ const Home = () => {
                     <h2>Get in touch!</h2>
                     <h1>+91 9853290230</h1>
                     <p>Explore the world !!!</p> 
+                    <p>Made with Love ❤️</p>
                 </div>
             </div>
 
@@ -250,7 +251,7 @@ const Home = () => {
             <div className="max-width">
                 <div className="footer5">
                     <div className="text_div">
-                    <h3>Copyright © 2019 Construction. All rights reserved.</h3>
+                    <h3>Copyright © 2023 Travel EkSath</h3>
                     </div>
 
                     <div className="text_div">
