@@ -55,7 +55,7 @@ const Home = () => {
 
             <li><Link to = "/CreateGroup">Create Group</Link></li>
           
-            <li><Link to = "/Blog">Forum</Link></li>
+            <li><Link to = "/Forum">Forum</Link></li>
 
             <li><Link to = "/Aboutus">About Us</Link></li>
            

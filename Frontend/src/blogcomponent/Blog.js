@@ -40,9 +40,9 @@ const Blog = () => {
 
     <nav className="navbar" >
 
-        <div>
+        {/* <div>
             <img src={logo} alt=""/>
-        </div>
+        </div> */}
 
         <div>
 
