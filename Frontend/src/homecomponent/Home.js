@@ -170,19 +170,19 @@ const Home = () => {
         <div className="card_div">
 
         <div className="card">
-            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zerooneone} alt="" height="300px" width="240px"/>
+            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zerooneone} alt="" height="300px" width="225rem"/>
         </div>
         <div className="card">
-            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonetwo} alt="" height="300px" width="240px"/>
+            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonetwo} alt="" height="300px" width="225rem"/>
         </div>
         <div className="card">
-            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonethree} alt="" height="300px" width="240px"/>
+            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonethree} alt="" height="300px" width="225rem"/>
         </div>
         <div className="card">
-            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonefour} alt="" height="300px" width="240px"/>
+            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonefour} alt="" height="300px" width="225rem"/>
         </div>
         <div className="card">
-            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonefive} alt="" height="300px" width="240px"/>
+            <img  style={{borderRadius:'1rem', objectFit:'cover'}} src={zeroonefive} alt="" height="300px" width="225rem"/>
         </div>
 
         </div>
