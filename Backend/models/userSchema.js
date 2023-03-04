@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-// const bcrypt = require('bcryptjs');
-// const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -15,11 +15,15 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    city: {
+    password: {
         type: String,
         required: true
     },
-    state: {
+    gender: {
+        type: String,
+        required: true
+    },
+    location: {
         type: String,
         required: true
     },
@@ -27,32 +31,39 @@ const userSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
+    tokens: [
+        {
+            token: {
+                type: String,
+                required: true
+            }
+        }
+    ]
   
 })
 
 // Hashing password
 // Call this method when save method is called
-// userSchema.pre('save', async function (next) {
-//     if (this.isModified('password')) {
-//         // 12 - number of rounds
-//         this.password = await bcrypt.hash(this.password, 12);
-       
-//     }
-//     next()
-// });
+userSchema.pre('save', async function (next) {
+    if (this.isModified('password')) {
+        // 12 - number of rounds
+        this.password = await bcrypt.hash(this.password, 12);
+    }
+    next()
+});
 
 // Generating token
-// userSchema.methods.generateAuthToken = async function () {
-//     try {
-//         let token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
-//         this.tokens = this.tokens.concat({token:token});
-//         await this.save();
-//         return token;
-//     }
-//     catch (err) {
-//         console.log(err);
-//     }
-// }
+userSchema.methods.generateAuthToken = async function () {
+    try {
+        let token = jwt.sign({ _id: this._id }, process.env.SECRET_KEY);
+        this.tokens = this.tokens.concat({token:token});
+        await this.save();
+        return token;
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 
 const User = mongoose.model('users', userSchema);
 
