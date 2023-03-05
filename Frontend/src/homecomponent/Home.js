@@ -107,7 +107,7 @@ const Home = () => {
     <div className="main_div7">
         <div className="text_div">
             
-            <h1>What Our Clients Saying?</h1>
+            <h1>What Our Users are Saying?</h1>
         </div>
         <div className="card_div">
             <div className="card">

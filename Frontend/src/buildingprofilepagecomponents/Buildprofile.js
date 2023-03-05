@@ -52,11 +52,11 @@ export const Buildprofile = () => {
                                 <div>
                                     <label htmlFor="profileimage">Upload Profile Image : </label>
                                     <input type="file" name='profileimg' id='profileimg'
-                                        accept=".png, .jpg, .jpeg" style={{ marginLeft: '75px' }} />
+                                        accept=".png, .jpg, .jpeg" style={{ marginLeft: '77px' }} />
                                 </div>
                                 <div>
                                     <label htmlFor="description">Enter Description : </label>
-                                    <textarea name="desc" id="desc" cols="30" rows="10" style={{ marginLeft: '107px' }}></textarea >
+                                    <textarea name="desc" id="desc" cols="30" rows="10" style={{ marginLeft: '119px' }}></textarea >
                                 </div>
                                 <div>
                                 <label htmlFor="interest">What are your interest ? : </label>
@@ -64,9 +64,9 @@ export const Buildprofile = () => {
                                         type="text"
                                         value={newInterest}
                                         onChange={(event) => setNewInterest(event.target.value)}
-                                        style={{ marginLeft: '78px', marginRight:'3px' }}
+                                        style={{ marginLeft: '90px', marginRight:'3px' }}
                                     />
-                                    <button onClick={handleAddInterest}>Add Interest</button>
+                                    <button onClick={handleAddInterest} style={{marginRight:'-30px'}}>Add Interest</button>
                                     <ul>
                                         {interests.map((interest) => (
                                             <li key={interest}>{interest}</li>
