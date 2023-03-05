@@ -8,11 +8,12 @@ const User = require('../models/travelSchema');
 
 router.post('/travel', async (req, res) => {
     try {
-        const { name, groupSize, ageGroupFrom, ageGroupTill, interests, gender, genderPreference, location, availableFrom, availableTill } = req.body
+        const { name, email, groupSize, ageGroupFrom, ageGroupTill, interests, gender, genderPreference, location, availableFrom, availableTill } = req.body
 
         const userExist = await User.findOne({
             $and: [
                 { name: name },
+                {email: email},
                 { genderPreference: genderPreference },
                 { gender: gender },
                 { groupSize: groupSize },
@@ -50,7 +51,7 @@ router.post('/travel', async (req, res) => {
             const coordinates = [longitude, latitude];
             console.log(availableFrom, availableTill);
             const newUser = new User({
-                name, groupSize, ageGroupFrom, ageGroupTill, interests, genderPreference, gender, location: {
+                name, email, groupSize, ageGroupFrom, ageGroupTill, interests, genderPreference, gender, location: {
                     type: 'Point',
                     coordinates: coordinates,
                     name: location

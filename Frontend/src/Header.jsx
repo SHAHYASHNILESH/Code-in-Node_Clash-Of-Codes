@@ -58,7 +58,7 @@ const Header = (props) => {
 
                     <ul className="list1">
 
-                        <li><Link to="/travel-together">Travel Together</Link></li>
+                        <li><Link to={`/travel-together`}>Travel Together</Link></li>
 
                         <li><Link to="/CreateGroup">Create Group</Link></li>
 

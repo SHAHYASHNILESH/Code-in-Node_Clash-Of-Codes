@@ -31,7 +31,6 @@ function App() {
 
       <Route path = "/Creategroup" element = {<Creategroup/>}/>
       <Route path = "/Blog" element = {<Blog/>}/>
-
       <Route path = "/Ourteam" element = {<Ourteam/>}/>
       <Route path = "/Forum" element = {<Forum/>}/>
       <Route path = "/Forum/?cat=adv/" element = {<Forum/>}/>

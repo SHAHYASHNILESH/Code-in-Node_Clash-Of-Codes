@@ -5,6 +5,10 @@ const travelSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
   groupSize: {
     type: Number,
     required: true,

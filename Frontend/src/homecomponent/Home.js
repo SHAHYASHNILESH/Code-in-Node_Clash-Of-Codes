@@ -45,7 +45,7 @@ const Home = () => {
     </header> */}
 
     
-    <Header email={(location && location.state && location.state.email) ?location.state.email : ''} />
+    <Header email={(location && location.state && location.state.email) ?location.state.email : ''} /> 
 
 
     <div className="main_div1">
