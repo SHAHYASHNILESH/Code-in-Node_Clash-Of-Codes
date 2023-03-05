@@ -45,8 +45,6 @@ const Home = () => {
 
     
     <Header />
-
-
     <div className="main_div1">
         <div className="text_div">
             <h1>Welcome to Travel EkSath</h1>

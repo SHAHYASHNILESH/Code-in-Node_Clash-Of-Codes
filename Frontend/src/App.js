@@ -21,10 +21,6 @@ import Single from './forumcomponent/Single';
 import Write from './forumcomponent/Write';
 
 
-
-
-
-
 function App() {
   return (
     <>

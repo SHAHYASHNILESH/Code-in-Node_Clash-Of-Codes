@@ -36,11 +36,11 @@ const userSchema = new mongoose.Schema({
     },
     bio:{
         type:String,
-        required:true,
+        //required:true,
     },
     interests:{
         type:[String],
-        required:true,
+        //required:true,
     },
     tokens: [
         {
