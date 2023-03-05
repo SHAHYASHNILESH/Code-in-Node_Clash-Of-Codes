@@ -50,16 +50,14 @@ const Write = () => {
       <div id="homepage">
         <nav className="navbar">
           <div>
-            <img src={logo} alt="logo" style={{ height: 105 }} />
+            <img src={logo} alt="logo" style={{ height: 120 }} />
           </div>
 
           <div>
             <ul className="list1">
+              
               <li>
-                <Link to="/Login">Login/SignUp</Link>
-              </li>
-              <li>
-                <Link to="/Write">Write</Link>
+                <Link to="/Forum">Forum</Link>
               </li>
             </ul>
           </div>

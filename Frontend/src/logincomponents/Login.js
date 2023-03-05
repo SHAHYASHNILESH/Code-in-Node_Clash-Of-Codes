@@ -63,7 +63,7 @@ export default function Login() {
     else {
 
       alert("Registration successful");
-      navigate('/Mainpage',{state: {email:user.email}})
+      navigate('/Buildprofile',{state: {name:user.name,email:user.email,phone:user.phone,gender:user.gender,location:user.location,dob:user.dob}})
     }
   };
   
@@ -157,27 +157,30 @@ export default function Login() {
         </label>
         <label>
           <span>Gender</span>
-          <input type="date" name="dob" onChange={handleInput}/>
+          <input type="text" name="gender" onChange={handleInput}/>
         </label>
         
         <label>
-          <span></span>
-          <input type="text" name="city" onChange={handleInput}/>
+          <span>Location</span>
+          <input type="text" name="location" onChange={handleInput}/>
         </label>
         
         <label>
           <span>Password</span>
-          <input type="text" name="state" onChange={handleInput}/>
+          <input type="password" name="password" onChange={handleInput}/>
         </label>
-      
-        {/* <button type="button" className="submit" onClick={postData}>
+        <label>
+          <span>DOB</span>
+          <input type="date" name="dob" onChange={handleInput}/>
+        </label>
+        <button type="button" className="submit" onClick={postData}>
                 Sign Up Now
-              </button> */}
+        </button>
               
         {/* This is just for test. For backend use above code - 169 */}
 
-        <Link to="/Buildprofile"><button className="submit" type="button">Sign In</button></Link>
-        <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link>
+        {/* <Link to="/Buildprofile"><button className="submit" type="button">Sign Up</button></Link> */}
+        {/* <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link> */}
         
 
         
