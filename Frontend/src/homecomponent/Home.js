@@ -15,11 +15,13 @@ import footer2 from '../Media/Footer/post-02.jpg'
 import footer3 from '../Media/Footer/post-01.jpg'
 import './Home.scss'
 import '../font-awesome-4.7.0/css/font-awesome.min.css'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '../Header'
 import Footer from '../Footer'
 
 const Home = () => {
+    const location = useLocation()
+    // console.log(location.state.email)
   return (
     <>
     <div id ="homepage">
@@ -42,9 +44,8 @@ const Home = () => {
         <div><i className="fa fa-phone"></i>+ 18000-200-1234</div>
     </header> */}
 
-
     
-    <Header />
+    <Header email={(location && location.state && location.state.email) ?location.state.email : ''} />
 
 
     <div className="main_div1">

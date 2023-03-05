@@ -21,8 +21,8 @@ export default function Login() {
     setUser({ ...user, [name]: value });
   };
   const [login, setLogin] = useState({
-    email: 0,
-   
+    email: '',
+   password: ''
 
   });
   const handleInput1 = (e) => {
@@ -69,7 +69,7 @@ export default function Login() {
   
   const loginData = async (e) => {
     //e.preventDefault();
-    const { email} = login;
+    const { email, password} = login;
     console.log("Login");
     console.log(login)
     const res = await fetch("/login", {
@@ -79,6 +79,7 @@ export default function Login() {
       },
       body: JSON.stringify({
       email,
+      password
       }),
     });
     const data = await res.json();
@@ -90,7 +91,7 @@ export default function Login() {
     } else {
       console.log("helo");
       console.log(login.email);
-      navigate('/Dummy',{state: {email:login.email}});
+      navigate('/',{state: {email:login.email}});
     //   alert("Login successful");
       
     }
