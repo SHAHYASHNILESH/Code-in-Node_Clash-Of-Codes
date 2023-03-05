@@ -1,7 +1,7 @@
 import Aboutus from './aboutuscomponent/Aboutus';
 import './App.css';
 import Home from './homecomponent/Home.js'
-import Service from './servicescomponents/Service';
+import TravelTogether from './travelTogether/TravelTogether';
 import Ourteam from './ourteamcomponent/Ourteam';
 import Blog from './blogcomponent/Blog';
 import Contactus from './contactuscomponent/Contactus';
@@ -22,7 +22,7 @@ function App() {
     <Routes>
       <Route path ="/" element = {<Home/>}/>
       <Route path ="/Aboutus" element = {<Aboutus/>}/>
-      <Route path = "/Service" element = {<Service/>}/>
+      <Route path = "/travel-together" element = {<TravelTogether />}/>
       <Route path = "/Ourteam" element = {<Ourteam/>}/>
       <Route path = "/Blog" element = {<Blog/>}/>
       <Route path ="/Contactus" element = {<Contactus/>}/>
