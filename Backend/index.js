@@ -13,6 +13,7 @@ require('./db/conn');
 
 app.use(express.json());
 app.use(require('./router/auth'));
+app.use(require('./router/travel'));
 app.use(require('./router/group'));
 
 app.post('/api/upload',upload.single('file'),(req,res)=>{

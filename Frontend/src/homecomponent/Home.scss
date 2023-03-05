@@ -4,44 +4,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0');
 
 
-#homepage{
-    $color_1: white;
-$color_2: rgb(254,152,47);
-$color_3: rgb(8,21,40);
-$color_4: rgb(102,102,102);
-$color_5: red;
-$color_6: rgb(239,236,236);
-$color_7: black;
-$color_8: rgb(75,76,84);
-$font-family_1: 'Poppins', sans-serif;
-$font-family_2: 'Josefin Sans', sans-serif;
-$background-color_1: rgb(254,152,47);
-$background-color_2: rgb(8,21,40);
-$background-color_3: white;
-$background-color_4: rgb(23,35,53);
-$background-color_5: rgb(239,236,236);
-$background-color_6: transparent;
-$background-color_7: rgb(248,249,250);
-$background-color_8: black;
-$background-color_9: rgb(13,28,51);
-$background-color_10: rgb(17,17,17);
+#homepage {
+	$color_1: white;
+	$color_2: rgb(254, 152, 47);
+	$color_3: rgb(8, 21, 40);
+	$color_4: rgb(102, 102, 102);
+	$color_5: red;
+	$color_6: rgb(239, 236, 236);
+	$color_7: black;
+	$color_8: rgb(75, 76, 84);
+	$font-family_1: 'Poppins',
+	sans-serif;
+	$font-family_2: 'Josefin Sans',
+	sans-serif;
+	$background-color_1: rgb(254, 152, 47);
+	$background-color_2: rgb(8, 21, 40);
+	$background-color_3: white;
+	$background-color_4: rgb(23, 35, 53);
+	$background-color_5: rgb(239, 236, 236);
+	$background-color_6: transparent;
+	$background-color_7: rgb(248, 249, 250);
+	$background-color_8: black;
+	$background-color_9: rgb(13, 28, 51);
+	$background-color_10: rgb(17, 17, 17);
 
-/* .max_width{
+	/* .max_width{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 } */
-@keyframes rotate {
-	from {
-		transform: rotate(0deg);
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+
+		to {
+			transform: rotate(360deg);
+		}
 	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-/* HEADER */
-/* NAVBAR */
-/* .navbar .list1 a:nth-child(1)::after{
+
+	/* HEADER */
+	/* NAVBAR */
+	/* .navbar .list1 a:nth-child(1)::after{
     height: 2px;
     width: 15px;
     border-radius: 2px;
@@ -52,15 +56,15 @@ $background-color_10: rgb(17,17,17);
     bottom:1;
     left: 0;
 } */
-/* .navbar .list1 li i:hover{
+	/* .navbar .list1 li i:hover{
     color:  rgb(8,21,40);
 } */
-/* HOME PAGE 1 */
-/* HOME PAGE 2 */
-/* HOMEPAGE3 */
-/* HOMEPAGE4 */
-/* HOMEPAGE5 */
-/* .main_div5 .content .circle{
+	/* HOME PAGE 1 */
+	/* HOME PAGE 2 */
+	/* HOMEPAGE3 */
+	/* HOMEPAGE4 */
+	/* HOMEPAGE5 */
+	/* .main_div5 .content .circle{
         content: "";
         border: 2px solid white;
         height: 67px;
@@ -72,404 +76,456 @@ $background-color_10: rgb(17,17,17);
         left: -4px;
         animation: pulse 2s infinite;
     } */
-@keyframes pulse {
-	0% {
-		transform: scale(0.8);
-		box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+	@keyframes pulse {
+		0% {
+			transform: scale(0.8);
+			box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+		}
+
+		70% {
+			transform: scale(1);
+			box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+		}
+
+		100% {
+			transform: scale(0.8);
+		}
 	}
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(255,255,255,0);
-	}
-	100% {
-		transform: scale(0.8);
-	}
-}
-/* HOMEPAGE6 */
-/* HOMEPAGE7 */
-/* .footer_div1 .inner2 div{
+
+	/* HOMEPAGE6 */
+	/* HOMEPAGE7 */
+	/* .footer_div1 .inner2 div{
     border: 2px solid red;
 } */
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-}
-.setting {
-	position: absolute;
-	position: fixed;
-	left: 0px;
-	top: 200px;
-	padding-top: 8px;
-	height: 40px;
-	width: 40px;
-	text-align: center;
-	font-size: 20px;
-	color: $color_1;
-	background-color: $background-color_1;
-	z-index: 10;
-}
-.abc {
-	animation: rotate;
-	animation-duration: 1000ms;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-.home_button {
-	position: absolute;
-	position: fixed;
-	right: 40px;
-	top: 550px;
-	padding-top: 8px;
-	height: 40px;
-	width: 40px;
-	text-align: center;
-	font-size: 20px;
-	color: $color_1;
-	background-color: $background-color_1;
-	z-index: 10;
-	a {
-		color: $color_1;
-		text-decoration: none;
+	* {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
 	}
-}
-header {
-	padding: 13px;
-	padding-left: 680px;
-	background-color: $background-color_2;
-	display: flex;
-	div {
-		height: 25px;
-		padding-top: 5px;
+
+	.setting {
+		position: absolute;
+		position: fixed;
+		left: 0px;
+		top: 200px;
+		padding-top: 8px;
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		font-size: 20px;
 		color: $color_1;
-		font-family: $font-family_1;
-		font-weight: 400;
-		font-size: 13px;
-		&:nth-child(1) {
-			padding-right: 15px;
-			border-right: 1px solid rgb(57,68,83);
+		background-color: $background-color_1;
+		z-index: 10;
+	}
+
+	.abc {
+		animation: rotate;
+		animation-duration: 1000ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	.home_button {
+		position: absolute;
+		position: fixed;
+		right: 40px;
+		top: 550px;
+		padding-top: 8px;
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		font-size: 20px;
+		color: $color_1;
+		background-color: $background-color_1;
+		z-index: 10;
+
+		a {
+			color: $color_1;
+			text-decoration: none;
 		}
-		&:nth-child(2) {
-			padding-left: 15px;
-			padding-right: 15px;
-			border-right: 1px solid rgb(57,68,83);
-			.fa {
-				margin-right: 8px;
-				color: $color_2;
-				font-size: 13px;
+	}
+
+	header {
+		padding: 13px;
+		padding-left: 680px;
+		background-color: $background-color_2;
+		display: flex;
+
+		div {
+			height: 25px;
+			padding-top: 5px;
+			color: $color_1;
+			font-family: $font-family_1;
+			font-weight: 400;
+			font-size: 13px;
+
+			&:nth-child(1) {
+				padding-right: 15px;
+				border-right: 1px solid rgb(57, 68, 83);
 			}
-			a {
-				text-decoration: none;
-				color: $color_1;
-				font-family: $font-family_1;
-				font-weight: 400;
-				font-size: 13px;
-				transition: all 0.5s;
-				&:hover {
+
+			&:nth-child(2) {
+				padding-left: 15px;
+				padding-right: 15px;
+				border-right: 1px solid rgb(57, 68, 83);
+
+				.fa {
+					margin-right: 8px;
 					color: $color_2;
+					font-size: 13px;
+				}
+
+				a {
+					text-decoration: none;
+					color: $color_1;
+					font-family: $font-family_1;
+					font-weight: 400;
+					font-size: 13px;
+					transition: all 0.5s;
+
+					&:hover {
+						color: $color_2;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				padding-left: 15px;
+
+				.fa {
+					margin-right: 8px;
+					color: $color_2;
+					font-size: 13px;
 				}
 			}
 		}
-		&:nth-child(3) {
-			padding-left: 15px;
-			.fa {
-				margin-right: 8px;
-				color: $color_2;
-				font-size: 13px;
+	}
+
+	.navbar {
+		padding: 25px 0px;
+		display: flex;
+		background-color: rgb(93, 34, 161);
+		justify-content: space-between;
+		align-items: center;
+
+		div {
+			img {
+				background-color: $background-color_3;
+				padding: 3px 5px;
+				position: absolute;
+				left: 100px;
+				top: 0px;
+				z-index: 10;
+				width: 200px;
+			}
+
+			&:nth-child(2) {
+				display: flex;
+			}
+		}
+
+		.list1 {
+			margin-right: 10vw;
+			padding-top: 7px;
+
+			li {
+				list-style: none;
+				display: inline;
+				padding-left: 40px;
+
+				a {
+					position: relative;
+					font-size: 17px;
+					text-decoration: none;
+					color: $color_1;
+					font-family: $font-family_2;
+					font-weight: 600;
+					font-size: 1.2rem;
+
+					// transition: all 5s;
+					// transition-timing-function: ease-in;
+					// transform-origin: left;
+					&::after {
+						height: 2px;
+						width: 15px;
+						border-radius: 2px;
+						content: "";
+						display: block;
+						background-color: $background-color_3;
+						position: absolute;
+						bottom: 1;
+						left: 0;
+						transform: scalex(0);
+						transition: transform 0.3s;
+						transform-origin: left;
+					}
+
+					&:hover {
+						&::after {
+							transform: scaleX(1);
+						}
+					}
+				}
+
+				i {
+					font-size: 20px;
+					color: $color_1;
+					transition: all 0.5s;
+				}
+			}
+		}
+
+		.list2 {
+			margin-right: 100px;
+
+			li {
+				list-style: none;
+				display: inline;
+				padding-left: 3px;
+
+				i {
+					border: 1px solid white;
+					padding-top: 8px;
+					height: 35px;
+					width: 35px;
+					text-align: center;
+					font-size: 17px;
+					color: $color_1;
+					transition: all 0.5s;
+
+					&:hover {
+						border: 1px solid transparent;
+						color: $color_2;
+						background-color: $background-color_3;
+					}
+				}
 			}
 		}
 	}
-}
-.navbar {
-	padding: 25px 0px;
-	display: flex;
-	background-color: rgb(93, 34, 161);
-	justify-content: space-between;
-	align-items: center;
-	div {
-		img {
-			background-color: $background-color_3;
-			padding: 3px 5px;
+
+	.main_div1 {
+		background-image: url(../Media/Home/slider-mainbg-004.jpg);
+		height: 100vh;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+
+		.text_div {
 			position: absolute;
-			left: 100px;
-			top: 0px;
-			z-index: 10;
-			width: 200px;
-		}
-		&:nth-child(2) {
-			display: flex;
-		}
-	}
-	.list1 {
-		margin-right: 10vw;
-		padding-top: 7px;
-		
-		li {
-			list-style: none;
-			display: inline;
-			padding-left: 40px;
-			a {
-				position: relative;
-				font-size: 17px;
-				text-decoration: none;
-				color: $color_1;
+			margin-left: auto;
+			margin-right: auto;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+			h1 {
+				padding-top: 40px;
+				margin-bottom: 30px;
 				font-family: $font-family_2;
-				font-weight: 600;
-				font-size: 1.2rem;
-				// transition: all 5s;
-				// transition-timing-function: ease-in;
-				// transform-origin: left;
-				&::after {
-					height: 2px;
-					width: 15px;
+				font-weight: 900;
+				font-size: 62px;
+				color: rgb(238, 227, 223);
+				word-spacing: 2px;
+				text-shadow: 5px 5px 5px rgb(93, 34, 161);
+
+				span {
+					font-family: $font-family_2;
+					font-weight: 900;
+					color: black;
+				}
+			}
+
+			p {
+				margin-top: 15px;
+				padding-top: 15px;
+				font-family: $font-family_1;
+				font-weight: bold;
+				color: black;
+				font-size: 20px;
+				text-shadow: 3px 3px 3px rgb(243, 238, 238);
+			}
+
+			button {
+				&::before {
+					height: 25px;
+					width: 2px;
 					border-radius: 2px;
 					content: "";
 					display: block;
-					background-color: $background-color_3;
+					background-color: $background-color_1;
 					position: absolute;
-					bottom: 1;
-					left: 0;
+					top: -50px;
+					left: 50%;
+				}
+
+				position: relative;
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+				top: 140%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 15px 30px;
+				color: $color_1;
+				cursor: pointer;
+				background-color: $background-color_1;
+				border: none;
+
+				&::after {
+					background-color: $background-color_2;
+					content: '';
+					width: 211px;
+					height: 53px;
+					position: absolute;
+					top: -2px;
+					left: -3px;
+					z-index: -1;
 					transform: scalex(0);
-					transition: transform 0.3s;
+					transition: transform 0.5s;
 					transform-origin: left;
 				}
+
 				&:hover {
 					&::after {
 						transform: scaleX(1);
 					}
 				}
-			}
-			i {
-				font-size: 20px;
-				color: $color_1;
-				transition: all 0.5s;
-			}
-		}
-	}
-	.list2 {
-		margin-right: 100px;
-		li {
-			list-style: none;
-			display: inline;
-			padding-left: 3px;
-			i {
-				border: 1px solid white;
-				padding-top: 8px;
-				height: 35px;
-				width: 35px;
-				text-align: center;
-				font-size: 17px;
-				color: $color_1;
-				transition: all 0.5s;
-				&:hover {
-					border: 1px solid transparent;
-					color: $color_2;
-					background-color: $background-color_3;
-				}
-			}
-		}
-	}
-}
-.main_div1 {
-	background-image: url(../Media/Home/slider-mainbg-004.jpg);
-	height: 100vh;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	.text_div {
-		position: absolute;
-		margin-left: auto;
-		margin-right: auto;
-		top: 45%;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		text-align: center;
-		h1 {
-			padding-top: 40px;
-			margin-bottom: 30px;
-			font-family: $font-family_2;
-			font-weight: 900;
-			font-size: 62px;
-			color: rgb(238, 227, 223);
-			word-spacing: 2px;
-			text-shadow: 5px 5px 5px rgb(93, 34, 161);
-			span {
-				font-family: $font-family_2;
-				font-weight: 900;
-				color: black;
-			}
-		}
-		p {
-			margin-top: 15px;
-			padding-top: 15px;
-			font-family: $font-family_1;
-			font-weight: bold;
-			color: black;
-			font-size: 20px;
-			text-shadow: 3px 3px 3px rgb(243, 238, 238);
-		}
-		button {
-			&::before {
-				height: 25px;
-				width: 2px;
-				border-radius: 2px;
-				content: "";
-				display: block;
-				background-color: $background-color_1;
-				position: absolute;
-				top: -50px;
-				left: 50%;
-			}
-			position: relative;
-			position: absolute;
-			margin-left: auto;
-			margin-right: auto;
-			top: 140%;
-			left: 50%;
-			transform: translate(-50%,-50%);
-			padding: 15px 30px;
-			color: $color_1;
-			cursor: pointer;
-			background-color: $background-color_1;
-			border: none;
-			&::after {
-				background-color: $background-color_2;
-				content: '';
-				width: 211px;
-				height: 53px;
-				position: absolute;
-				top: -2px;
-				left: -3px;
-				z-index: -1;
-				transform: scalex(0);
-				transition: transform 0.5s;
-				transform-origin: left;
-			}
-			&:hover {
-				&::after {
-					transform: scaleX(1);
-				}
-			}
-			a {
-				text-decoration: none;
-				color: $color_1;
-				font-family: $font-family_2;
-				font-weight: 600;
-				font-size: 18px;
-			}
-		}
-	}
-}
 
-.main_div3 {
-	background-image: url(../Media/Home/row-bgimage-2.jpg);
-	height: 110vh;
-	width: 100%;
-	margin-top: 10px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-	.inner_div {
-		background-image: linear-gradient(rgba(100, 127, 168, 0.9), rgb(93, 34, 161)) ,url(../Media/Home/col-bgimage-1.png);
-		height: 500px;
-		width: 700px;
-		position: absolute;
-		left: 0;
-		top: 70px;
-		// border-right: 10px solid rgb(254,152,47);
-		.text_div1 {
-			h1 {
-				padding-top: 60px;
-				padding-left: 70px;
-				color: $color_1;
-				font-family: $font-family_2;
-				font-weight: 700;
-				width: 700px;
-				font-size: 37px;
+				a {
+					text-decoration: none;
+					color: $color_1;
+					font-family: $font-family_2;
+					font-weight: 600;
+					font-size: 18px;
+				}
 			}
-			p {
-				padding-top: 20px;
-				padding-left: 70px;
-				padding-right: 100px;
-				width: 800px;
+		}
+	}
+
+	.main_div3 {
+		background-image: url(../Media/Home/row-bgimage-2.jpg);
+		height: 110vh;
+		width: 100%;
+		margin-top: 10px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+
+		.inner_div {
+			background-image: linear-gradient(rgba(100, 127, 168, 0.9), rgb(93, 34, 161)), url(../Media/Home/col-bgimage-1.png);
+			height: 500px;
+			width: 700px;
+			position: absolute;
+			left: 0;
+			top: 70px;
+
+			// border-right: 10px solid rgb(254,152,47);
+			.text_div1 {
+				h1 {
+					padding-top: 60px;
+					padding-left: 70px;
+					color: $color_1;
+					font-family: $font-family_2;
+					font-weight: 700;
+					width: 700px;
+					font-size: 37px;
+				}
+
+				p {
+					padding-top: 20px;
+					padding-left: 70px;
+					padding-right: 100px;
+					width: 800px;
+					color: $color_1;
+					font-family: $font-family_1;
+					font-weight: 400;
+					font-size: 14px;
+				}
+			}
+
+			.text_div2 {
+				position: relative;
+				display: flex;
+				width: 850px;
 				color: $color_1;
 				font-family: $font-family_1;
 				font-weight: 400;
-				font-size: 14px;
-			}
-		}
-		.text_div2 {
-			position: relative;
-			display: flex;
-			width: 850px;
-			color: $color_1;
-			font-family: $font-family_1;
-			font-weight: 400;
-			font-size: 20px;
-			padding-top: 20px;
-			padding-left: 50px;
-			padding-right: 100px;
-			div {
-				padding-left: 20px;
-				i {
-					padding-top: 20px;
-				}
-				span {
-					color: $color_1;
-					padding-left: 10px;
-				}
-				.fa {
-					padding-right: 20px;
-					color: $color_2;
-				}
-			}
-			&::after {
-				height: 2px;
-				border-radius: 2px;
-				content: "";
-				display: block;
-				background-color: $background-color_4;
-				position: absolute;
-				bottom: -20px;
-				left: 90px;
-			}
-		}
-		.icon_div {
-			margin-top: 50px;
-			margin-left: 40px;
-			height: 70px;
-			width: 700px;
-			display: flex;
-			.div1 {
-				border-right: 1px solid rgb(23,35,53);
-				width: 210px;
-				display: flex;
-				.fa {
-					color: $color_2;
-					font-size: 50px;
-					padding-left: 30px;
-				}
+				font-size: 20px;
+				padding-top: 20px;
+				padding-left: 50px;
+				padding-right: 100px;
+
 				div {
-					&:nth-child(2) {
-						padding-left: 20px;
-						font-size: 17px;
+					padding-left: 20px;
+
+					i {
+						padding-top: 20px;
+					}
+
+					span {
 						color: $color_1;
-						font-family: $font-family_1;
-						font-weight: 400;
-						h1 {
-							font-family: $font-family_2;
+						padding-left: 10px;
+					}
+
+					.fa {
+						padding-right: 20px;
+						color: $color_2;
+					}
+				}
+
+				&::after {
+					height: 2px;
+					border-radius: 2px;
+					content: "";
+					display: block;
+					background-color: $background-color_4;
+					position: absolute;
+					bottom: -20px;
+					left: 90px;
+				}
+			}
+
+			.icon_div {
+				margin-top: 50px;
+				margin-left: 40px;
+				height: 70px;
+				width: 700px;
+				display: flex;
+
+				.div1 {
+					border-right: 1px solid rgb(23, 35, 53);
+					width: 210px;
+					display: flex;
+
+					.fa {
+						color: $color_2;
+						font-size: 50px;
+						padding-left: 30px;
+					}
+
+					div {
+						&:nth-child(2) {
+							padding-left: 20px;
+							font-size: 17px;
+							color: $color_1;
+							font-family: $font-family_1;
 							font-weight: 400;
+
+							h1 {
+								font-family: $font-family_2;
+								font-weight: 400;
+							}
 						}
 					}
 				}
 			}
 		}
 	}
-}
 
 .main_div7 {
 	background-image: linear-gradient(rgba(100, 127, 168, 0.9), rgb(93, 34, 161));
