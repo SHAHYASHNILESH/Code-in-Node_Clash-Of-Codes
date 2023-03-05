@@ -175,8 +175,9 @@ export default function Login() {
               
         {/* This is just for test. For backend use above code - 169 */}
 
-        <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link>
         <Link to="/Buildprofile"><button className="submit" type="button">Sign In</button></Link>
+        <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link>
+        
 
         
         

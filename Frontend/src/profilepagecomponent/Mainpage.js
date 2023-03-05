@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './Mainpage.scss';
+// import './Mainpage.scss';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Mainpage() {
