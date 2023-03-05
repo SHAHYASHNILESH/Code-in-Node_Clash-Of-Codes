@@ -10,8 +10,9 @@ export default function Login() {
     name: "",
     email: "",
     phone: 0,
-    city: "",
-    state:"",
+    gender:"",
+    location:"",
+    password:"",
     dob: "",
   });
   const handleInput = (e) => {
@@ -20,7 +21,7 @@ export default function Login() {
     setUser({ ...user, [name]: value });
   };
   const [login, setLogin] = useState({
-    phone: 0,
+    email: 0,
    
 
   });
@@ -36,7 +37,7 @@ export default function Login() {
   };
   const postData = async (e) => {
     //e.preventDefault();
-    const { name, email, phone, city, state, dob } = user;
+    const { name, email, phone,gender,password, location, dob } = user;
     const res = await fetch("/register", {
       method: "POST",
       headers: {
@@ -46,8 +47,9 @@ export default function Login() {
         name,
         email,
         phone,
-        city, 
-        state, 
+        gender, 
+        location, 
+        password,
         dob,
       }),
     });
@@ -61,13 +63,13 @@ export default function Login() {
     else {
 
       alert("Registration successful");
-      navigate('/Mainpage',{state: {phone:user.phone}})
+      navigate('/Mainpage',{state: {email:user.email}})
     }
   };
   
   const loginData = async (e) => {
     //e.preventDefault();
-    const { phone} = login;
+    const { email} = login;
     console.log("Login");
     console.log(login)
     const res = await fetch("/login", {
@@ -76,7 +78,7 @@ export default function Login() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-      phone,
+      email,
       }),
     });
     const data = await res.json();
@@ -87,8 +89,8 @@ export default function Login() {
       
     } else {
       console.log("helo");
-      console.log(login.phone);
-      navigate('/Dummy',{state: {phone:login.phone}});
+      console.log(login.email);
+      navigate('/Dummy',{state: {email:login.email}});
     //   alert("Login successful");
       
     }
@@ -101,8 +103,12 @@ export default function Login() {
     <div className="form sign-in">
       <h2>Sign In</h2>
       <label>
-        <span>Phone Number</span>
-        <input type="tel" name="phone"  onChange={handleInput1}/>
+        <span>Email</span>
+        <input type="email" name="email"  onChange={handleInput1}/>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password"  onChange={handleInput1}/>
       </label>
 
       
@@ -149,20 +155,17 @@ export default function Login() {
           <input type="number" name="phone"  onChange={handleInput}/>
         </label>
         <label>
-          <span>Date of birth</span>
+          <span>Gender</span>
           <input type="date" name="dob" onChange={handleInput}/>
         </label>
         
         <label>
-          <span>City</span>
+          <span></span>
           <input type="text" name="city" onChange={handleInput}/>
         </label>
-        {/* <label>
-          <span>Dsitrict</span>
-          <input type="text"/>
-        </label> */}
+        
         <label>
-          <span>State</span>
+          <span>Password</span>
           <input type="text" name="state" onChange={handleInput}/>
         </label>
       
@@ -172,8 +175,9 @@ export default function Login() {
               
         {/* This is just for test. For backend use above code - 169 */}
 
-        <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link>
         <Link to="/Buildprofile"><button className="submit" type="button">Sign In</button></Link>
+        <Link to="/Mainpage"><button className="submit" type="button">Sign In</button></Link>
+        
 
         
         

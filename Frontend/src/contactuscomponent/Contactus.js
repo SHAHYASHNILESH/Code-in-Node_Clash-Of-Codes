@@ -155,7 +155,7 @@ const Contactus = () => {
                 <textarea name="" id="" cols="60" rows="2" placeholder="Message"></textarea>
             </div>
 
-            <button><a href="">Submit Quote</a> </button>
+            <button><a href="">Submit </a> </button>
         </div>
 
     </div>

@@ -32,6 +32,7 @@ function App() {
       <Route path ="/" element = {<Home/>}/>
       <Route path ="/Aboutus" element = {<Aboutus/>}/>
       <Route path = "/Service" element = {<Service/>}/>
+
       <Route path = "/Creategroup" element = {<Creategroup/>}/>
       <Route path = "/Blog" element = {<Blog/>}/>
 
