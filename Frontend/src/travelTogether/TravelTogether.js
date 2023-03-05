@@ -181,7 +181,6 @@ const TravelTogether = () => {
                     {console.log(matches)}
                     {matches && matches.availability &&  matches.availability.map((m) => {
                         {
-                            console.log(m);
                             (m.email || m.email !== email) ?
                             <>
                                 <div class="card" style="width: 18rem;">
