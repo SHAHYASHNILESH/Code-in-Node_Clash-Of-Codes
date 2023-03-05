@@ -13,9 +13,10 @@ $color_4: rgb(102,102,102);
 $color_5: rgb(73,80,87);
 $color_6: black;
 $color_7: rgb(75,76,84);
+$color_8: rgb(75,76,84);
 $font-family_1: 'Poppins', sans-serif;
 $font-family_2: 'Josefin Sans', sans-serif;
-$background-color_1: rgb(254,152,47);
+$background-color_1: rgb(125, 48, 197);
 $background-color_2: rgb(8,21,40);
 $background-color_3: white;
 $background-color_4: rgb(245,245,245);
@@ -24,7 +25,8 @@ $background-color_6: black;
 $background-color_7: transparent;
 $background-color_8: rgb(13,28,51);
 $background-color_9: rgb(17,17,17);
-
+$background-color_10: rgb(17,17,17);
+// rgb(254,152,47)
 @keyframes rotate {
 	from {
 		transform: rotate(0deg);
@@ -143,31 +145,33 @@ header {
 	}
 }
 .navbar {
-	padding: 18px 0px;
+	padding: 25px 0px;
 	display: flex;
-	background-color: $background-color_1;
+	background-color: rgb(93, 34, 161);
 	justify-content: space-between;
 	align-items: center;
 	div {
 		img {
 			background-color: $background-color_3;
-			padding: 30px 35px;
+			padding: 3px 5px;
 			position: absolute;
 			left: 100px;
 			top: 0px;
 			z-index: 10;
+			width: 200px;
 		}
 		&:nth-child(2) {
 			display: flex;
 		}
 	}
 	.list1 {
-		margin-right: 25px;
+		margin-right: 10vw;
 		padding-top: 7px;
+		
 		li {
 			list-style: none;
 			display: inline;
-			padding-left: 22px;
+			padding-left: 40px;
 			a {
 				position: relative;
 				font-size: 17px;
@@ -175,9 +179,10 @@ header {
 				color: $color_1;
 				font-family: $font-family_2;
 				font-weight: 600;
-				transition: all 5s;
-				transition-timing-function: ease-in;
-				transform-origin: left;
+				font-size: 1.2rem;
+				// transition: all 5s;
+				// transition-timing-function: ease-in;
+				// transform-origin: left;
 				&::after {
 					height: 2px;
 					width: 15px;
@@ -202,21 +207,6 @@ header {
 				font-size: 20px;
 				color: $color_1;
 				transition: all 0.5s;
-			}
-		}
-		a {
-			&:nth-child(1) {
-				&::after {
-					height: 2px;
-					width: 15px;
-					border-radius: 2px;
-					content: "";
-					display: block;
-					background-color: $background-color_3;
-					position: absolute;
-					bottom: 1;
-					left: 0;
-				}
 			}
 		}
 	}
@@ -246,7 +236,7 @@ header {
 }
 .main_div1 {
 	background-image: url(../Media/Home/slider-mainbg-003.jpg);
-	height: 250px;
+	height: 550px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -288,8 +278,9 @@ header {
 	display: flex;
 	.img_div {
 		width: 50%;
+		
 		img {
-			margin-left: 100px;
+			margin-left: 150px;
 			margin-top: 80px;
 		}
 	}
@@ -965,17 +956,17 @@ header {
 		}
 	}
 }
+
 footer {
-	height: 90vh;
 	width: 100%;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 .footer_div1 {
 	width: 100%;
 	height: 120px;
 	display: flex;
 	.inner1 {
-		background-color: $background-color_8;
+		background-color: $background-color_9;
 		width: 30%;
 		text-align: center;
 		padding-top: 40px;
@@ -1025,7 +1016,7 @@ footer {
 	}
 }
 .footer_div2 {
-	background-image: linear-gradient(rgb(8,21,40,0.5),rgb(8,21,40,0.5)) ,url(../Media/Footer/footer-bg.jpg);
+	background-image: linear-gradient(rgba(100, 127, 168, 0.9), rgb(70, 26, 121)) ,url(../Media/Footer/footer-bg.jpg);
 	height: 400px;
 	background-position: center;
 	background-size: cover;
@@ -1208,7 +1199,7 @@ footer {
 		padding: 15px 30px;
 		color: $color_2;
 		cursor: pointer;
-		background-color: $background-color_7;
+		background-color: $background-color_6;
 		z-index: 1;
 		border: 2px solid rgb(254,152,47);
 		margin-left: 20px;
@@ -1248,7 +1239,7 @@ footer {
 .footer_div3 {
 	width: 100%;
 	height: 60px;
-	background-color: $background-color_9;
+	background-color: $background-color_10;
 	width: 100%;
 	.max-width {
 		max-width: 1200px;
@@ -1258,6 +1249,7 @@ footer {
 	.footer5 {
 		display: flex;
 		justify-content: space-between;
+		margin-right: 60px;
 		h3 {
 			color: $color_1;
 			padding-top: 19px;
@@ -1267,7 +1259,7 @@ footer {
 			font-weight: 400;
 		}
 		.icon_div {
-			color: $color_7;
+			color: $color_8;
 			font-size: 18px;
 			padding-top: 19px;
 		}
@@ -1678,5 +1670,109 @@ footer {
 		}
 	}
 }
-
+.main_div7 {
+	background-image: linear-gradient(rgba(100, 127, 168, 0.9), rgb(70, 26, 121)),url(../Media/Home/row-bgimage-4.jpg);
+	height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 10px;
+	.text_div {
+		text-align: center;
+		padding-top: 120px;
+		h3 {
+			color: $color_1;
+			font-family: $font-family_1;
+			font-weight: 500;
+			font-size: 15px;
+		}
+		h1 {
+			color: $color_1;
+			font-family: $font-family_2;
+			font-weight: 700;
+			font-size: 40px;
+			padding-top: 15px;
+			position: relative;
+			&::after {
+				height: 6px;
+				width: 65px;
+				border-radius: 2px;
+				content: "";
+				display: block;
+				background-image: linear-gradient( to right,white 50%, rgb(8,21,40)50%);
+				position: absolute;
+				bottom: -25px;
+				left: 48%;
+			}
+		}
+	}
+	.card_div {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+		.card {
+			.para {
+				position: relative;
+				width: 350px;
+				background: #fff;
+				padding-top: 0.5px;
+				padding-left: 20px;
+				text-align: center;
+				height: 200px;
+				margin: 5px;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				&::before {
+					content: "";
+					width: 0px;
+					height: 0px;
+					position: absolute;
+					border-left: 24px solid #fff;
+					border-right: 12px solid transparent;
+					border-top: 12px solid #fff;
+					border-bottom: 20px solid transparent;
+					left: 32px;
+					bottom: -24px;
+				}
+				p {
+					font-family: $font-family_1;
+					font-style: italic;
+					font-weight: 400;
+					font-size: 16px;
+					color: $color_4;
+					width: 270px;
+				}
+			}
+			.name {
+				display: flex;
+				padding-left: 20px;
+				padding-top: 5px;
+				img {
+					height: 70px;
+					width: 70px;
+					border-radius: 50%;
+					border: 3px solid white;
+				}
+				span {
+					font-family: $font-family_2;
+					font-weight: 600;
+					color: $color_1;
+					padding-left: 20px;
+					padding-top: 15px;
+					font-size: 20px;
+					h5 {
+						font-family: $font-family_1;
+						font-weight: 400;
+						color: $color_1;
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+.simple {
+	width: 520px;
+	height: 601px;	
+}
 }

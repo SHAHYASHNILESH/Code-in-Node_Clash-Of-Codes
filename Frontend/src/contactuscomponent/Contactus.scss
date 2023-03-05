@@ -9,13 +9,13 @@
 
 #Contactuspage{
     $color_1: white;
-$color_2: rgb(254,152,47);
+$color_2: rgb(156, 61, 194);
 $color_3: rgb(8,21,40);
 $color_4: rgb(119,119,119);
 $color_5: rgb(75,76,84);
 $font-family_1: 'Poppins', sans-serif;
 $font-family_2: 'Josefin Sans', sans-serif;
-$background-color_1: rgb(254,152,47);
+$background-color_1: rgb(126, 47, 254);
 $background-color_2: rgb(8,21,40);
 $background-color_3: white;
 $background-color_4: rgb(248,249,250);
@@ -130,32 +130,35 @@ header {
 		}
 	}
 }
+
 .navbar {
-	padding: 18px 0px;
+	padding: 25px 0px;
 	display: flex;
-	background-color: $background-color_1;
+	background-color: rgb(93, 34, 161);
 	justify-content: space-between;
 	align-items: center;
 	div {
 		img {
 			background-color: $background-color_3;
-			padding: 30px 35px;
+			padding: 3px 5px;
 			position: absolute;
 			left: 100px;
 			top: 0px;
 			z-index: 10;
+			width: 200px;
 		}
 		&:nth-child(2) {
 			display: flex;
 		}
 	}
 	.list1 {
-		margin-right: 25px;
+		margin-right: 10vw;
 		padding-top: 7px;
+		
 		li {
 			list-style: none;
 			display: inline;
-			padding-left: 22px;
+			padding-left: 40px;
 			a {
 				position: relative;
 				font-size: 17px;
@@ -163,9 +166,10 @@ header {
 				color: $color_1;
 				font-family: $font-family_2;
 				font-weight: 600;
-				transition: transform 5s;
-				transition-timing-function: ease-in;
-				transform-origin: left;
+				font-size: 1.2rem;
+				// transition: all 5s;
+				// transition-timing-function: ease-in;
+				// transform-origin: left;
 				&::after {
 					height: 2px;
 					width: 15px;
@@ -190,24 +194,6 @@ header {
 				font-size: 20px;
 				color: $color_1;
 				transition: all 0.5s;
-				&:hover {
-					color: $color_3;
-				}
-			}
-		}
-		a {
-			&:nth-child(1) {
-				&::after {
-					height: 2px;
-					width: 15px;
-					border-radius: 2px;
-					content: "";
-					display: block;
-					background-color: $background-color_3;
-					position: absolute;
-					bottom: 1;
-					left: 0;
-				}
 			}
 		}
 	}
@@ -237,7 +223,7 @@ header {
 }
 .main_div1 {
 	background-image: url(../Media/Home/slider-mainbg-003.jpg);
-	height: 250px;
+	height: 550px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -270,7 +256,7 @@ header {
 	}
 }
 .main_div2 {
-	height: 100vh;
+	height: 80vh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -332,9 +318,10 @@ header {
 }
 .main_div3 {
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	margin-top: 00px;
+	justify-content: center;
 	.map_div {
 		margin-left: 100px;
 		margin-right: 40px;
