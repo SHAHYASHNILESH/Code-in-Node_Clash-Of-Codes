@@ -18,8 +18,9 @@ const Write = () => {
   const upload = async () => {
     try {
       const formData = new FormData();
+      console.log(formData);
       formData.append("file", file);
-      const res = await axios.post("/api/posts/", formData);
+      const res = await axios.post("/api/upload/", formData);
       console.log(res.data);
       return res.data;
     } catch (err) {
@@ -29,23 +30,16 @@ const Write = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    const imgUrl = await upload();
+    // const imgUrl = await upload();
+    // console.log(imgUrl);
     try {
-      state
-        ? await axios.put(`/api/posts/${state.id}`, {
-            title,
-            desc: value,
-            cat,
-            img: file ? imgUrl : "",
-          })
-        : await axios.post(`/api/posts/`, {
-            title,
-            desc: value,
-
-            img: file ? imgUrl : "",
-            date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
-          });
-      navigate("/");
+      await axios.post("/api/posts/", {
+        title,
+        desc: value,
+        cat,
+        date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
+      });
+      navigate("/Forum");
     } catch (err) {
       console.log(err);
     }
@@ -78,6 +72,7 @@ const Write = () => {
             placeholder="Title"
             onChange={(e) => setTitle(e.target.value)}
           />
+
           <div className="editorContainer">
             <ReactQuill
               className="editor"
@@ -86,73 +81,13 @@ const Write = () => {
               onChange={setValue}
             />
           </div>
-        </div>
-        <div className="menu">
-          <div className="item">
-            <h1>Publish</h1>
-            <span>
-              <b>Status: </b> Draft
-            </span>
-            <span>
-              <b>Visibility: </b> Public
-            </span>
-            <input
-              style={{ display: "none" }}
-              type="file"
-              id="file"
-              name="file"
-              onChange={(e) => setFile(e.target.files[0])}
-            />
-            <label className="file" htmlFor="file">
-              Upload Image
-            </label>
-            <div className="buttons">
-              <button>Save as a draft</button>
-              <button onClick={handleClick}>Publish</button>
-            </div>
-          </div>
-          <div className="item">
-            <h1>Category</h1>
-            <div className="cat">
-              <input
-                type="radio"
-                name="cat"
-                value="adv"
-                id="adv"
-                onChange={(e) => setCat(e.target.value)}
-              />
-              <label htmlFor="adv">Adventure</label>
-            </div>
-            <div className="cat">
-              <input
-                type="radio"
-                name="cat"
-                value="trek"
-                id="trek"
-                onChange={(e) => setCat(e.target.value)}
-              />
-              <label htmlFor="trek">Trekking</label>
-            </div>
-            <div className="cat">
-              <input
-                type="radio"
-                name="cat"
-                value="abr"
-                id="abr"
-                onChange={(e) => setCat(e.target.value)}
-              />
-              <label htmlFor="adv">International</label>
-            </div>
-            <div className="cat">
-              <input
-                type="radio"
-                name="cat"
-                value="intr"
-                id="intr"
-                onChange={(e) => setCat(e.target.value)}
-              />
-              <label htmlFor="adv">Domestic</label>
-            </div>
+          <input
+            type="text"
+            placeholder="Category(Travel,Trek,Domestic,International)"
+            onChange={(e) => setCat(e.target.value)}
+          />
+          <div className="buttons">
+            <button onClick={handleClick}>Publish</button>
           </div>
         </div>
       </div>

@@ -129,7 +129,7 @@ const Home = () => {
 
     <div className="main_div7">
         <div className="text_div">
-            <h3>TESTIMONIAL</h3>
+            
             <h1>What Our Clients Saying?</h1>
         </div>
         <div className="card_div">

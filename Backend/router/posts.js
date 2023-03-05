@@ -1,7 +1,7 @@
 const express = require("express");
-const upload=require('../middleware/upload');
+const upload = require("../middleware/upload");
 const post = require("../models/postSchema");
-var cors = require('cors');
+var cors = require("cors");
 
 const router = express.Router();
 router.use(cors());
@@ -43,21 +43,20 @@ router.get("/:id", (req, res) => {
 //     });
 //   }
 // });
-router.post("/", upload.single("img"), async (req, res) => {
+router.post("/", async (req, res) => {
   // get the data sent by user
-  const { title, desc } = req.body;
+  const { title, desc,cat,date } = req.body;
+  console.log(req.body.cat);
 
   // Validation
   try {
     const posts = new post({
       title,
       desc,
+      cat,
+      date
     });
-
-    if (req.file) {
-      posts.img= req.file.path;
-    }
-
+    console.log(posts);
     await posts.save();
 
     res.status(201).json({ message: "Post created successfully" });

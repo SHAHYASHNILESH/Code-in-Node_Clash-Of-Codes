@@ -11,15 +11,15 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-<<<<<<< Updated upstream
+
 import { Creategroup } from './creategroupcomponent/Creategroup';
 import { Buildprofile } from './buildingprofilepagecomponents/Buildprofile.js';
 import Mainpage from './profilepagecomponent/Mainpage';
-=======
+
 import Forum from './forumcomponent/Forum';
 import Single from './forumcomponent/Single';
 import Write from './forumcomponent/Write';
->>>>>>> Stashed changes
+
 
 
 
@@ -32,10 +32,9 @@ function App() {
       <Route path ="/" element = {<Home/>}/>
       <Route path ="/Aboutus" element = {<Aboutus/>}/>
       <Route path = "/Service" element = {<Service/>}/>
-<<<<<<< Updated upstream
       <Route path = "/Creategroup" element = {<Creategroup/>}/>
       <Route path = "/Blog" element = {<Blog/>}/>
-=======
+
       <Route path = "/Ourteam" element = {<Ourteam/>}/>
       <Route path = "/Forum" element = {<Forum/>}/>
       <Route path = "/Forum/?cat=adv/" element = {<Forum/>}/>
@@ -44,7 +43,7 @@ function App() {
       <Route path = "/Forum/?cat=intr/" element = {<Forum/>}/>
       <Route path = "/post/:id" element = {<Single/>}/>
       <Route path = "/Write" element = {<Write/>}/>
->>>>>>> Stashed changes
+
       <Route path ="/Contactus" element = {<Contactus/>}/>
       <Route path = "/Login" element = {<Login/>}/>
       <Route path = "/Dummy" element ={<Dummy/>}/>
