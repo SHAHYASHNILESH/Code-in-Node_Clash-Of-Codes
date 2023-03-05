@@ -62,8 +62,8 @@ export default function Login() {
   }
     else {
 
-      alert("Registration successful");
-      navigate('/Buildprofile',{state: {name:user.name,email:user.email,phone:user.phone,gender:user.gender,location:user.location,dob:user.dob}})
+      alert("Registration successful,Please Sign In");
+      navigate('/Login',{state: {name:user.name,email:user.email,phone:user.phone,gender:user.gender,location:user.location,dob:user.dob}})
     }
   };
   
