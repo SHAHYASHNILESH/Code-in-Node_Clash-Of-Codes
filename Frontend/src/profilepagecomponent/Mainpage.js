@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-// import './Mainpage.scss';
+import './Mainpage.scss';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../Media/logo-img.png'
 
 export default function Mainpage() {
     // const [user, setUser] = useState({})
@@ -54,7 +55,35 @@ export default function Mainpage() {
    
            <div id="main-page">
            {/* <Navbarmainpage name = {user.name} /> */}
+           <nav className="navbar"  >
+
+        {/* <div>
+        <img src={logo}  alt="logo" />
+        </div> */}
+
+        <div>
+
+        <ul className="list1">
+               
+            <li><Link to = "/Service">Travel Together</Link></li>
+
+            <li><Link to = "/CreateGroup">Create Group</Link></li>
+          
+            <li><Link to = "/Forum">Forum</Link></li>
+
+            <li><Link to = "/Aboutus">About Us</Link></li>
+           
+            <li><Link to = "/Contactus">Contact Us</Link></li>
+            
+            <li><Link to = "/Login">Login/SignUp</Link></li>
+  
+        </ul>
+
+        </div>
+    </nav>
+
             <div className="container">
+            <div id='ppheading'style={{display:'flex', justifyContent:'center'}}><h5>USER PROFILE</h5></div>
                 <div className="main-body">
                     <div className="row gutters-sm">
                         <div className="col-md-4 mb-3">
@@ -66,16 +95,17 @@ export default function Mainpage() {
                                         <div className="mt-3">
                                             {/* <h4>{user.name}</h4> */}
                                             <h4>Meghesh Nagpure</h4>
-                                            <p className="text-secondary mb-1">Student at IB Learning</p>
+                                            <p className="text-secondary mb-1">Travel Comapnion</p>
                                             {/* <p className="text-muted font-size-sm">{user.city},{user.state}</p> */}
                                             <p className="text-muted font-size-sm">Mumbai, Maharashtra</p>
-                                            <Link to="/LevelsPage">
+                                            {/* <Link to="/LevelsPage">
                                             <button type="button" class="btn btn-success mx-2">Start</button>
-                                            </Link>
+                                            </Link> */}
+                                            <button type="button" class="btn btn-primary mx-2">Upload Photo</button>
                                             <Link to="/">
                                             <button type="button" class="btn btn-danger mx-2">Logout</button>
                                             </Link>
-                                            <button type="button" class="btn btn-primary mx-2">Upload Photo</button>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -83,21 +113,25 @@ export default function Mainpage() {
                             <div className="card mt-3">
                                 <ul className="list-group list-group-flush">
                                     <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                        <h3 className="mb-0"><b>Account Details</b></h3>
+                                        <h3 className="mb-0"><b>Hobbies / Interests</b></h3>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                        <h6 className="mb-0">Account Number:</h6>
-                                        <span className="text-secondary">60003200024</span>
+                                        <h6 className="mb-0">Exploring</h6>
+                                        <span className="text-secondary">New Places</span>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                        <h6 className="mb-0">CIF Number:</h6>
-                                        <span className="text-secondary">SBINI004</span>
+                                        <h6 className="mb-0">Photography</h6>
+                                        <span className="text-secondary">Wildlife</span>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                                        <h6 className="mb-0">Your Bank: </h6>
-                                        <span className="text-secondary">State Bank of India</span>
+                                        <h6 className="mb-0">Singing</h6>
+                                        <span className="text-secondary">Rap</span>
                                     </li>
                                     <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                        <h6 className="mb-0">Dancing</h6>
+                                        <span className="text-secondary">Hip-Hop</span>
+                                    </li>
+                                    {/* <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                         <div class="d-grid gap-2 col-10 mx-auto">
                                             <Link to="/Viewpassbook">
                                                 <button class="button-39">View Passbook</button>
@@ -106,7 +140,7 @@ export default function Mainpage() {
                                                 <button class="button-40">View Virtual Debit Card</button>
                                             </Link>
                                         </div>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>
@@ -231,7 +265,28 @@ export default function Mainpage() {
 
                 </div>
             </div>
+            <footer>
+                    <div className="footer_div3">
+                        <div className="max-width">
+                            <div className="footer5">
+                                <div className="text_div">
+                                    <h3>Copyright © 2023 Travel EkSath</h3>
+                                </div>
+                                <div className="text_div">
+                                    <h3 style={{ fontSize: '1rem' }}> Made with love ❤️</h3>
+                                </div>
+                                <div className="icon_div">
+                                    <i className="fa fa-facebook"></i>
+                                    <i className="fa fa-linkedin"></i>
+                                    <i className="fa fa-twitter"></i>
+                                    <i className="fa fa-google-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
            </div>
+
         </>
     )
 }
