@@ -83,7 +83,7 @@ const Write = () => {
           </div>
           <input
             type="text"
-            placeholder="Category(Travel,Trek,Domestic,International)"
+            placeholder="Category(Adventure,Trek,Domestic,International)"
             onChange={(e) => setCat(e.target.value)}
           />
           <div className="buttons">
